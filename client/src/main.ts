@@ -45,7 +45,7 @@ const fetchWeather = async (cityName: string) => {
 
   const weatherData = await response.json();
 
-  console.log('weatherData: ', weatherData);
+  // console.log('weatherData: ', weatherData);
 
   renderCurrentWeather(weatherData[0]);
   renderForecast(weatherData.slice(1));
@@ -255,7 +255,6 @@ const handleSearchFormSubmit = (event: any): void => {
   if (!searchInput.value) {
     throw new Error('City cannot be blank');
   }
-
   const search: string = searchInput.value.trim();
   fetchWeather(search).then(() => {
     getAndRenderHistory();

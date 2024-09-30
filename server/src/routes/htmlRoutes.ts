@@ -6,10 +6,12 @@ const __dirname = path.dirname(__filename);
 const router = Router();
 
 // TODO: Define route to serve index.html
-router.get('/', (req, res) => {
-    const indexPath = path.join(__dirname, '..', '..', '..', 'client', 'public', 'index.html');
-    res.send(indexPath);
+router.get('/', (_req, res) => {
+    const indexPath = path.join(__dirname, '..', '..', '..', 'client', 'index.html');
+    res.sendFile(indexPath);
 })
 
 
 export default router;
+
+// C:\Users\User\Desktop\Projects\ColumbiaBootcamp\WeatherAPI\Develop\client\index.html
